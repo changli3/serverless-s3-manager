@@ -1,0 +1,218 @@
+﻿.bwizard {
+    position: relative;
+}
+
+    .bwizard .well {
+        margin: 3px 0
+    }
+
+.bwizard-steps {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    background: #fff;
+}
+
+.bwizard-steps li {
+    display: inline-block;
+    position: relative;
+    margin-right: 5px;
+    line-height: 18px;
+    list-style: none;
+    padding: 12px 17px 10px 30px;
+    background: #efefef;
+    zoom: 1;
+    *display: inline;
+    *padding-left: 17px;
+}
+
+    .bwizard-steps li:first-child {
+        -moz-border-radius: 4px 0 0 4px;
+        -webkit-border-radius: 4px 0 0 4px;
+        border-radius: 4px 0 0 4px;
+        padding-left: 12px;
+    }
+
+        .bwizard-steps li:first-child:before {
+            border: none;
+        }
+
+    .bwizard-steps li:last-child {
+        -moz-border-radius: 0 4px 4px 0;
+        -webkit-border-radius: 0 4px 4px 0;
+        border-radius: 0 4px 4px 0;
+        margin-right: 0;
+    }
+
+        .bwizard-steps li:last-child:after {
+            border: none;
+        }
+
+    .bwizard-steps li:before {
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 0;
+        width: 0;
+        border-bottom: 20px inset transparent;
+        border-left: 20px solid #fff;
+        border-top: 20px inset transparent;
+        content: "";
+    }
+
+    .bwizard-steps li:after {
+        position: absolute;
+        right: -20px;
+        top: 0;
+        height: 0;
+        width: 0;
+        border-bottom: 20px inset transparent;
+        border-left: 20px solid #efefef;
+        border-top: 20px inset transparent;
+        content: "";
+        z-index: 2;
+    }
+
+.bwizard-steps .label {
+    margin: 0 5px 0 0;
+    padding: 1px 5px 2px;
+    position: relative;
+    top: -1px;
+}
+
+    .bwizard-steps .active, .active:after {
+        background: lightblue;
+    }
+
+
+.bwizard-steps a {
+    color: #333;
+}
+
+.bwizard-steps .active a {
+    color: #fff;
+    cursor: default;
+}
+
+.bwizard-steps a:hover {
+    text-decoration: none;
+}
+
+.bwizard-steps.clickable li:not(.active) {
+    cursor: pointer;
+}
+
+
+@media (max-width: 480px) {
+    /*badges only on small screens*/
+    .bwizard-steps li,
+    .bwizard-steps li.active,
+    .bwizard-steps li:first-child,
+    .bwizard-steps li:last-child {
+        background-color: transparent;
+        padding: 0;
+        margin-right: 0;
+    }
+
+        .bwizard-steps li:after,
+        .bwizard-steps li:before {
+            border: none;
+        }
+}
+
+/**page related**/
+
+
+.bwizard-steps {
+    margin-top: 10px !important;
+}
+
+
+.bodycontent {
+    padding: 0px;
+    margin: 0 auto;
+    max-width: 1200px;
+    float: none;
+}
+
+footer {
+    bottom: 0;
+    width: 100%;
+    background-color: #F9F9F9;
+    border-top: 1px solid #C2C2C2;
+    border-bottom: 3px solid #F9F9F9;
+}
+
+.banner-text {
+    padding: 6px 0;
+    background: navy;
+    text-align: center;
+}
+
+
+.banner-text h2 {
+    display: inline-block;
+    font-size: 20px;
+    color: #fff;
+    line-height: 2;
+}
+
+.process-head {
+    text-align: left;
+    font-size: 20px;
+    padding: 8px 0;
+}
+
+h3 {
+    font-size: 18px;
+    color:#808080;
+}
+
+legend {
+    font-size: 18px;
+    color:darkgrey;
+}
+.process {
+    padding: 0;
+    background: #f2f2f2;
+    margin-top: -13px;
+    margin-bottom: 10px;
+}
+
+
+.process-block {
+    padding: 0;
+    min-height: 215px;
+}
+
+
+.json-key {
+    color: brown;
+}
+
+.json-value {
+    color: navy;
+}
+
+.json-string {
+    color: olive;
+}
+
+#launchbtn {
+    float:right;
+}
+
+.left100px {
+    margin-left: 100px;
+}
+
+
+a:focus, a:hover {
+    text-decoration: none;
+}
+
+body {
+    margin-top:15px;
+}
+
+

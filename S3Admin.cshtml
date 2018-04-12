@@ -1,0 +1,108 @@
+﻿
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="SHORTCUT ICON" href="favicon.ico" />
+    <title>WC2H S3 Admin</title>
+    <link rel="stylesheet" href="~/Content/s3admin/css/theme.css">
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="~/Content/s3admin/css/themes/default/style.min.css" />
+</head>
+<body>
+    <div class="container body-content">
+        <div class="container-fluid bodycontent" ng-app="ngWC2HS3Browser" ng-controller="ngWC2HS3BrowserController" ng-cloak>
+
+            <div>
+                <a href="~/">Home</a> |
+                <a href="~/Wizard">Resource Wizard</a> |
+                <a href="~/CustomerStacks">Resource Manager</a> |
+                <a href="~/">Resource Scheduler</a> |
+                <a href="//10.174.130.118/sqladmin/">WC2H SQL Admin</a> |
+                <a href="~/Utils/S3Admin/">WC2H S3 Admin</a>
+            </div>
+
+            <div class="jumbotron" style="padding-top:10px;padding-bottom:10px;text-align:center;color:brown">
+                <h2>WC2H S3 Manager</h2>
+            </div>
+            <div id="treepanel" class="col-md-12">
+                <div ng-show="errorMessage" class="alert alert-danger">
+                    <br />
+                    {{errorMessage}}
+                </div>
+                <div id="loginForm" ng-show="setup==1">
+                    <label for="AccessKeyId">Access Key Id:</label>
+                    <input type="password" ng-model="AWSConfig.AWS_AccessKeyId" maxlength="21"><br />
+                    <label for="SecretAccessKey">Secret Access Key:</label>
+                    <input type="password" ng-model="AWSConfig.AWS_SecretAccessKey" maxlength="41"><br />
+                    <label for="BucketName">Bucket Name:</label>
+                    <input ng-model="AWSConfig.AWS_BucketName" style="width:300px;"><br />
+                    <br />
+                    <a href="#" ng-click="login()" class="btn btn-primary pull-right">Login &raquo;</a>
+                    <br />
+                </div>
+                <div id="status" ng-show="setup==2">
+                    <div id="statusimg"></div> <div id="statustext">Connecting to S3 API...</div>
+                </div>
+                <div ng-show="setup==3 || setup==2">
+                    <div class="span6 pull-right">
+                        <a href="#" ng-click="download()" class="btn btn-primary" ng-show="isFile">Download File</a>
+                        <a href="#" ng-click="upload()" class="btn btn-primary" ng-show="isFolder || isRoot">Upload File</a>
+                        <a href="#" ng-click="createFolder()" class="btn btn-primary" ng-show="isFolder || isRoot">Create Folder</a>
+                        <a href="#" ng-click="delete()" class="btn btn-primary" ng-show="isFolder || isFile">Delete</a>
+                    </div>
+                    <div id="s3tree"></div>
+                </div>
+            </div>
+            <div id="createFolderModal" class="modal fade" role="dialog">
+                <div class="modal-dialog">
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title">Create a Folder</h4>
+                        </div>
+                        <div class="modal-body">
+                            Folder Name: <input ng-model="inputs.newValue" style="width:300px;">
+                            <a href="#" ng-click="doCreateFolder()" class="btn btn-primary">Create</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="uploadFileModal" class="modal fade" role="dialog">
+                <div class="modal-dialog">
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title">Upload a File</h4>
+                        </div>
+                        <div class="modal-body">
+                            <input id="uploadfile" type="file" style="width:300px;">
+                            <div ng-show="acl == 'public'"><input type="checkbox" ng-model="inputs.public" /> Make File Public</div>
+                            <a href="#" ng-click="doUploadFile()" class="btn btn-primary pull-right">Upload</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <footer>
+            <p>&copy; 2017 - Digital Services, Enterprise Business Solutions, Office of Chief Information Officer, Department of Treasury</p>
+        </footer>
+    </div>
+
+
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="https://sdk.amazonaws.com/js/aws-sdk-2.0.0-rc1.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
+    <script src="~/Content/s3admin/js/jstree.min.js"></script>
+    <script src="~/Content/s3admin/js/app.js"></script>
+</body>
+</html>
+

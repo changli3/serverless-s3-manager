@@ -1,0 +1,71 @@
+
+footer {
+    margin-top: 30px;
+    bottom: 0;
+    width: 100%;
+    background-color: #F9F9F9;
+    border-top: 1px solid #C2C2C2;
+    border-bottom: 3px solid #F9F9F9;
+}
+
+html, body {
+  background-color: #fff;
+  font-family: verdana, sans-serif;
+  height: 100%;
+  padding:0px;
+  margin:0px;
+  font-size: 13px;  
+}
+
+
+img {
+  border: 0;
+  vertical-align: middle;
+}
+
+
+#loginForm {
+	width: 300px;
+	margin: auto;
+	left: 50%;
+}
+
+#loginForm label {
+	display: block;
+}
+
+#loginForm input[type=password] {
+	width: 300px;
+}
+
+#status {
+	padding: 5px 0px 5px 0px;
+	margin-left:40%;
+	vertical-align: middle;	
+	position: absolute;
+}
+
+#statusimg {
+	vertical-align: middle;			
+	background: url("../img/loading.gif") no-repeat;
+	float: left;
+	width: 45px;
+	height:40px;				
+}	
+
+#statustext {
+    margin-top:5px;
+}		
+
+#s3tree {
+    margin-top:25px;
+	margin-bottom:25px;
+}
+#treepanel {
+padding:15px;
+	background-color:#ddd;
+	min-height:100px;
+}
+.modal-body {
+	min-height:120px;
+}
