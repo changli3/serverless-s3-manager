@@ -40,7 +40,7 @@ To use this console to manage a AWS bucket, the bucket has to set up to allow CO
 
 Test the S3 Admin GUI
 ===============================
-Go to s3 public URL, for example, if you are using the us-east-1 region S3 service, you url will be like - https://s3.amazonaws.com/mys3admin-001/index.htm
+Go to s3 public URL, for example, if you are using the us-east-1 region S3 service, you url will be like - https://s3.amazonaws.com/mys3admin-001/index.html
 
 #### Login Screen
 In the login screen, put in the access keys and the managed bucket and region -
