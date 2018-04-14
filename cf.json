@@ -69,7 +69,7 @@
                         {
                             "Fn::GetAtt": [
                                 "S3Bucket",
-                                "WebsiteURL"
+                                "DomainName"
                             ]
                         }, "/index.html"
                     ]
