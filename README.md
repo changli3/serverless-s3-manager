@@ -34,8 +34,8 @@ To use this console to manage a AWS bucket, the bucket has to set up to allow CO
 
 #### Login Screen
 In the login screen, put in the access keys and the managed bucket and region -
-![Login Screen](https://raw.githubusercontent.com/changli3/LAMP-SQL-ADMIN/master/login.png "Login Screen")
+![Login Screen](https://raw.githubusercontent.com/changli3/serverless-s3-manager/master/login.png "Login Screen")
 
 #### S3 Admin UI
 Once login, click on the files/folders, operations will appear on the right corner -
-![S3 Admin UI](https://raw.githubusercontent.com/changli3/LAMP-SQL-ADMIN/master/ssui.png "S3 UI")
+![S3 Admin UI](https://raw.githubusercontent.com/changli3/serverless-s3-manager/master/ssui.png "S3 UI")
