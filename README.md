@@ -48,4 +48,4 @@ In the login screen, put in the access keys and the managed bucket and region -
 
 #### S3 Admin UI
 Once login, click on the files/folders, operations will appear on the right corner -
-![S3 Admin UI](https://raw.githubusercontent.com/changli3/serverless-s3-manager/master/ssui.png "S3 UI")
+![S3 Admin UI](https://raw.githubusercontent.com/changli3/serverless-s3-manager/master/s3ui.png "S3 UI")
