@@ -5,7 +5,7 @@ angular.module('ngWC2HS3Browser', [])
             AWS_AccessKeyId: '',
             AWS_SecretAccessKey: '',
             AWS_BucketName: '',
-            AWS_Region: 'us-gov-west-1',
+            AWS_Region: 'us-east-1',
             AWS_MaxKeys: 500,
             AWS_Prefix: '',
             AWS_SignedUrl_Expires: '604800'
@@ -26,20 +26,8 @@ angular.module('ngWC2HS3Browser', [])
                 return;
             }
             $scope.setup = 2;
-
-            $.get("/Utils/ValidateBucket?bucket=" + encodeURIComponent($scope.AWSConfig.AWS_BucketName),
-                function (data) {
-                    var dt = JSON.parse(data);
-                    if (dt.data === "public" || dt.data === "private") {
-                        $scope.acl = dt.data;
-                        $scope.startBrowse();
-
-                    } else {
-                        $scope.setup = 1;
-                        $scope.errorMessage = "Invalid S3 bucket. Please retry.";
-                        $scope.$apply();
-                    }
-                });
+	
+            $scope.startBrowse();
         };
 
         $scope.download = function () {

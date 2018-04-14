@@ -1,33 +1,22 @@
 ﻿
-@{
-    Layout = null;
-}
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="SHORTCUT ICON" href="favicon.ico" />
-    <title>WC2H S3 Admin</title>
-    <link rel="stylesheet" href="~/Content/s3admin/css/theme.css">
-    <link href="~/Content/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="~/Content/s3admin/css/themes/default/style.min.css" />
+    <title>Serverless S3 Admin</title>
+    <link rel="stylesheet" href="css/theme.css">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/themes/default/style.min.css" />
 </head>
 <body>
     <div class="container body-content">
         <div class="container-fluid bodycontent" ng-app="ngWC2HS3Browser" ng-controller="ngWC2HS3BrowserController" ng-cloak>
 
-            <div>
-                <a href="~/">Home</a> |
-                <a href="~/Wizard">Resource Wizard</a> |
-                <a href="~/CustomerStacks">Resource Manager</a> |
-                <a href="~/">Resource Scheduler</a> |
-                <a href="//10.174.130.118/sqladmin/">WC2H SQL Admin</a> |
-                <a href="~/Utils/S3Admin/">WC2H S3 Admin</a>
-            </div>
 
             <div class="jumbotron" style="padding-top:10px;padding-bottom:10px;text-align:center;color:brown">
-                <h2>WC2H S3 Manager</h2>
+                <h2>Serverless S3 Manager</h2>
             </div>
             <div id="treepanel" class="col-md-12">
                 <div ng-show="errorMessage" class="alert alert-danger">
@@ -39,6 +28,8 @@
                     <input type="password" ng-model="AWSConfig.AWS_AccessKeyId" maxlength="21"><br />
                     <label for="SecretAccessKey">Secret Access Key:</label>
                     <input type="password" ng-model="AWSConfig.AWS_SecretAccessKey" maxlength="41"><br />
+                    <label for="BucketName">AWS S3 Region:</label>
+                    <input ng-model="AWSConfig.AWS_Region" style="width:300px;"><br />
                     <label for="BucketName">Bucket Name:</label>
                     <input ng-model="AWSConfig.AWS_BucketName" style="width:300px;"><br />
                     <br />
@@ -92,17 +83,17 @@
 
         </div>
         <footer>
-            <p>&copy; 2017 - Digital Services, Enterprise Business Solutions, Office of Chief Information Officer, Department of Treasury</p>
+            <p>Serverless S3 Admin - by chang.li3@treasury.gov</p>
         </footer>
     </div>
 
 
-    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
-    <script src="~/Scripts/bootstrap.min.js"></script>
-    <script src="https://sdk.amazonaws.com/js/aws-sdk-2.0.0-rc1.js"></script>
+    <script src="js/jquery-1.10.2.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+	<script src="https://sdk.amazonaws.com/js/aws-sdk-2.224.1.min.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
-    <script src="~/Content/s3admin/js/jstree.min.js"></script>
-    <script src="~/Content/s3admin/js/app.js"></script>
+    <script src="js/jstree.min.js"></script>
+    <script src="js/app.js"></script>
 </body>
 </html>
 
