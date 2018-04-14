@@ -7,8 +7,8 @@ Launch Cloudformation
 ==================================
 ```
 git clone https://github.com/changli3/serverless-s3-manager.git
-cd serverless-s3-manager
 
+cd serverless-s3-manager
 
 aws cloudformation deploy --stack-name S3Amin --template-file cf.json --parameter-overrides  newBucketName=mys3admin-001 allowIPs="0.0.0.0/0" 
 ```
