@@ -16,7 +16,7 @@ aws cloudformation deploy --stack-name S3Amin --template-file cf.json --paramete
 If the cloudformation is successful, cp the S3 Admin code into the bucket -
 
 ```
-aws s3 cp ./s3admin s3://mys3admin-001/ --recursive
+aws s3 sync ./s3admin s3://mys3admin-001/
 ```
 
 Setup Managed AWS Buckets
